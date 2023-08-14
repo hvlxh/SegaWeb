@@ -39,20 +39,20 @@ const sections = [
 function FAQ() {
   return (
     <div className="w-full px-4">
-      <div className="mx-auto w-full rounded-lg bg-white dark:bg-[rgb(20,20,20)]/50 my-4 max-sm:py-2 py-3 shadow-lg">
-        <p className='mb-3 text-center dark:text-white font-medium text-2xl'>FAQ</p>
+      <div className="mx-auto w-full rounded-lg bg-white/10 my-4 max-sm:py-2 py-3 shadow-lg">
+        <p className='mb-3 text-center text-white font-bold text-xl'>FAQ</p>
         {sections.map((sec, index) => (
           <Disclosure key={index} as="div" className="my-2 mx-3">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[rgb(230,230,230)] dark:bg-[rgb(10,10,10)]/60 text-black dark:text-white px-4 py-3 text-left text-sm font-medium hover:drop-shadow-xl hover:bg-red-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                  <span className='drop-shadow-xl text-black'>{sec.number}. {sec.question}</span>
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white/20 text-white/80 px-4 py-3 text-left text-sm font-medium hover:drop-shadow-xl hover:bg-red-200 duration-100 focus:outline-none focus-visible:ring focus-visible:ring-red-500 focus-visible:ring-opacity-75">
+                  <span className='drop-shadow-xl text-white/80'>{sec.number}. {sec.question}</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''
                       } h-5 w-5 text-red-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="mx-1 px-4 pt-2 pb-2 text-sm dark:text-white bg-[rgb(245,245,245)] dark:bg-[rgb(20,20,20)]/50 rounded-b-lg">
+                <Disclosure.Panel className="mx-1 px-4 pt-2 pb-2 text-sm  bg-white/30 text-white/90 rounded-b-lg">
                   {sec.answer}
                 </Disclosure.Panel>
               </>

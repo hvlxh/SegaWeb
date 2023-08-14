@@ -32,8 +32,8 @@ body {
   bottom: 0;
   background-image: url('/bg.png');
   background-size: cover;
-  background-position: center;
-  filter: blur(2px);
+  background-position:initial;
+  filter: blur(10px) brightness(60%);
   /* Apply the blur effect to the pseudo-element */
   z-index: -1;
   /* Place the pseudo-element behind the content */
