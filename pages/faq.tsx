@@ -7,7 +7,7 @@ const FAQPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home - Sega</title>
+        <title>FAQ - Sega</title>
       </Head>
 
       <Navbar active='faq' />
