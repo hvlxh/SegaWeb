@@ -10,13 +10,13 @@ interface NavbarProps {
 }
 
 const NavIcon = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
-  <Link href={href} className="flex items-center p-2 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+  <Link href={href} className="flex items-center p-2 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75">
     {icon}
   </Link>
 );
 
 const NavItem = ({ href, text }: { href: string, text: string }) => (
-  <Link href={href} className="flex items-center p-2 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+  <Link href={href} className="flex items-center p-2 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75">
     <span>{text}</span>
   </Link>
 );
@@ -29,10 +29,10 @@ const Navbar = (props: NavbarProps) => {
 
   return (
     <Popover className="w-full">
-      <nav className="bg-white/10 shadow-lg mb-4 max-sm:py-3 py-3 relative flex justify-between items-center">
+      <nav className="bg-white/10 shadow-lg mb-4 max-sm:py-3 py-3 relative flex justify-between items-center sm:px-5">
         {/* Left section */}
         <div className="flex items-center px-4">
-          <Link href="/" passHref className="rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+          <Link href="/" passHref className="rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75">
             <Image
               src="https://media.discordapp.net/attachments/962595773051174952/962595813488492554/title.png"
               width={120}
@@ -62,14 +62,14 @@ const Navbar = (props: NavbarProps) => {
           <div className="flex items-center space-x-2 max-sm:hidden">
             <NavIcon href="https://store.segamc.net" icon={<FaShoppingBag className="text-white text-xl hover:text-red-400 duration-150" />} />
             <NavIcon href="https://discord.segamc.net" icon={<FaDiscord className="text-white text-xl hover:text-red-400 duration-150" />} />
-            <NavIcon href="https://vote.segamc.net/" icon={<FaVoteYea className="text-white text-xl hover:text-red-400 duration-150 mr-5" />} />
+            <NavIcon href="https://vote.segamc.net/" icon={<FaVoteYea className="text-white text-xl hover:text-red-400 duration-150" />} />
           </div>
         </ul>
 
 
         {/* Mobile menu toggle */}
         <div className="-my-2 mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white/40 p-2 text-black hover:bg-[rgb(200,200,200)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white/40 p-2 text-black hover:bg-[rgb(200,200,200)] focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75">
             <span className="sr-only">Open menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -109,11 +109,11 @@ const Navbar = (props: NavbarProps) => {
             </div>
             <div className="space-y-6 py-3 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-center">
-                <Link href="/faq" className="text-base font-normal dark:text-white/80 hover:text-red-600 hover:dark:text-red-500">
+                <Link href="/faq" className="text-base font-normal dark:text-white/80 hover:text-red-600 hover:dark:text-red-500 focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75 rounded">
                   FAQ
                 </Link>
 
-                <Link href="/staffs" className="text-base font-normal dark:text-white/80 hover:text-red-600 hover:dark:text-red-500">
+                <Link href="/staffs" className="text-base font-normal dark:text-white/80 hover:text-red-600 hover:dark:text-red-500 focus:outline-none focus-visible:ring focus-visible:ring-red-400 focus-visible:ring-opacity-75 rounded">
                   Staffs
                 </Link>
               </div>
